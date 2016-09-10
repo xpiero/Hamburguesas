@@ -10,16 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let coleccionDePaises = ColeccionDePaises()
+    let coleccionDeHamburguesas = ColeccionDeHamburguesas()
+    
+    @IBOutlet weak var etiquetaPais : UILabel!
+    @IBOutlet weak var etiquetaHamburguesa : UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func actualizarEtiquetas() {
+        etiquetaPais.text = coleccionDePaises.obtenPais()
+        etiquetaHamburguesa.text = coleccionDeHamburguesas.obtenHamburguesa()
     }
-
 
 }
 
