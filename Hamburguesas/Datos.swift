@@ -34,4 +34,8 @@ class ColeccionDeHamburguesas {
         let random = Int(arc4random()) % hamburguesas.count
         return hamburguesas[random]
     }
+    
+    func obtenerPrecio() -> Double {
+        return Double(arc4random() % 9) + Double(arc4random() % 100) / 100
+    }
 }
